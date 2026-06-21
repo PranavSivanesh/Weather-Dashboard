@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WeatherApp</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="search-container">
+            <label>Enter City Name:</label>
+            <input type="text" id="city">
+            <button id="search">Search</button>
+        </div>
+
+        <div id="weather-result" style="display:none">
+            <h1 id="city-name"></h1>
+            <p id="condition"></p>
+            <h1 id="temperature"></h1>
+            <div class="details">
+                <div class="detail-item">
+                    <span class="detail-label">Feels Like</span>
+                    <span id="feels-like" class="detail-value">${Math.round(data.main.feels_like)}°C</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Humidity</span>
+                    <span id="humidity" class="detail-value">${data.main.humidity}%</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Wind</span>
+                    <span id="wind" class="detail-value">${data.wind.speed} m/s</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
