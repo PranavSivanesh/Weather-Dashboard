@@ -14,7 +14,6 @@ function getEmoji(condition){
 
 document.getElementById("search").addEventListener("click", function(){
                 const city= document.getElementById("city").value;
-                const API_KEY = "6911ede542e054b5ad4f4bc6e7a72a42";
                 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
 
                 fetch(url)
@@ -31,7 +30,11 @@ document.getElementById("search").addEventListener("click", function(){
                         document.getElementById("feels-like").textContent = Math.round(data.main.feels_like) + "°C";
                         document.getElementById("humidity").textContent = data.main.humidity + "%";
                         document.getElementById("wind").textContent = data.wind.speed + " m/s";
-                        document.getElementById("weather-result").style.display = "block";
+                        const result = document.getElementById("weather-result");
+                        result.style.animation = "none";
+                        result.offsetHeight;
+                        result.style.animation = "fadeIn 0.5s ease";
+                        result.style.display = "block";
 
                         const condition = data.weather[0].main;
                         const gradients = {
