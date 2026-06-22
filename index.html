@@ -6,10 +6,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="search-container">
-            <label>Enter City Name:</label>
-            <input type="text" id="city">
-            <button id="search">Search</button>
+        <nav class="navbar">
+            <a href="index.html" id = "home-btn" class="home-btn">← Home</a>
+            <div class="nav-links">
+                <a href="https://www.linkedin.com/in/pranav-sivanesh-somi-praveen-0b033a378/" target="_blank">LinkedIn</a>
+                <a href="https://drive.google.com/file/d/1MaHGDoAUe8hdoY9Gi2Erm8kCkirofyU-/view?usp=drive_link" target="_blank">Resume</a>
+            </div>
+        </nav>
+
+        <div class="intro">
+            <h1>🌤️ Weather<em>App</em></h1>
+            <p>Real-time weather for any city in the world!</p>
+        
+            <div class="search-container">
+                <label>Enter City Name:</label>
+                <input type="text" id="city">
+                <button id="search">Search</button>
+            </div>
         </div>
 
         <div id="weather-result" style="display:none">
@@ -35,8 +48,6 @@
         <div id="forecast" style="display:none">
             <div class="forecast-container" id="forecast-days"></div>
         </div>
-
-        <div class="forecast-container" id="forecast-days"></div>
 
         <script src="config.js"></script>
         <script src="script.js"></script>

@@ -23,9 +23,15 @@ document.getElementById("search").addEventListener("click", function(){
                     .then(data => {
                         if(data.cod === "404"){
                             document.getElementById("weather-result").style.display = "none";
+                            document.getElementById("forecast").style.display = "none";
+                            document.body.style.background = "linear-gradient(135deg, #1a1a2e, #16213e)";
                             alert("City not Found. Please try again!")
                             return;
                         }
+                        document.querySelector('.intro').style.opacity = '0';
+                        document.querySelector('.intro').style.pointerEvents = 'none';
+                        document.querySelector('.intro').style.display = 'none';
+
                         document.getElementById("city-name").textContent = data.name + ", " + data.sys.country;
                         document.getElementById("temperature").textContent = Math.round(data.main.temp) + "°C";
                         document.getElementById("condition").textContent = getEmoji(data.weather[0].main) + " " + data.weather[0].description;
