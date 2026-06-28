@@ -210,3 +210,27 @@ button:hover{
     min-width: 80px;
     animation: fadeIn 0.5s ease;
 }
+
+@media (max-width: 768px) {
+    .intro {
+        padding: 120px 20px 20px 20px;
+    }
+
+    .intro h1 {
+        font-size: 48px;
+    }
+
+    .details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forecast-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+}
