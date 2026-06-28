@@ -24,7 +24,7 @@ Search any city in the world and get live weather data powered by the OpenWeathe
 
 ## Live Demo
 
-[![WeatherAPP](https://img.shields.io/badge/Live%20Demo-Visit%20App-blue?style=for-the-badge)](https://pranavsivanesh.github.io/Weather-Dashboard/)
+[![WeatherApp](https://img.shields.io/badge/WeatherApp-Live%20Demo-blue?style=for-the-badge)](https://pranavsivanesh.github.io/Weather-Dashboard/)
 
 ## Author
 
